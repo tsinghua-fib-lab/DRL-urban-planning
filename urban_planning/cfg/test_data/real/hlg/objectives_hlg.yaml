@@ -1,0 +1,62 @@
+community:
+  name: hlg
+  grid_cols: 2160
+  grid_rows: 2040
+  cell_edge_length: 1
+objectives:
+  land_use:
+    - residential
+    - business
+    - office
+    - green_l
+    - school
+    - hospital_l
+    - hospital_s
+    - recreation
+  ratio:
+    residential: 0.600
+  count:
+    business: 4
+    office: 6
+    green_l: 2
+    school: 6
+    hospital_l: 2
+    hospital_s: 4
+    recreation: 6
+constraints:
+  max_area:
+    residential: 300000
+    green_l: 90000
+    hospital_l: 30000
+    business: 20000
+    office: 20000
+    school: 20000
+    hospital_s: 10000
+    recreation: 10000
+  min_area:
+    residential: 20000
+    green_l: 15000
+    hospital_l: 10000
+    business: 10000
+    office: 10000
+    school: 10000
+    hospital_s: 2000
+    recreation: 2000
+  max_edge_length:
+    residential: 600
+    green_l: 300
+    hospital_l: 200
+    business: 200
+    office: 200
+    school: 200
+    hospital_s: 150
+    recreation: 150
+  min_edge_length:
+    residential: 100
+    green_l: 100
+    hospital_l: 100
+    business: 100
+    office: 100
+    school: 80
+    hospital_s: 80
+    recreation: 80

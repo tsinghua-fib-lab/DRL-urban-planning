@@ -1,0 +1,4 @@
+*.pyc
+*.svg
+.idea
+.ipynb_checkpoints

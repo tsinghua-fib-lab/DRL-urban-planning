@@ -1,0 +1,17 @@
+setuptools==59.5.0
+absl-py>=1.2.0
+torch>=1.8.1
+numpy>=1.21.6
+geopandas>=0.11.1
+Shapely>=1.8.2
+PyYAML>=6.0
+matplotlib>=3.5.3
+libpysal>=4.6.2
+momepy>=0.5.3
+networkx>=2.8.5
+osmnx>=1.1.2
+folium>=0.12.1
+mapclassify>=2.4.3
+pandas>=1.4.3
+setproctitle>=1.2.3
+tensorboard>=2.10.0

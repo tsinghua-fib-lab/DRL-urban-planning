@@ -1,0 +1,45 @@
+# env
+objectives_plan: objectives_dhm
+init_plan: init_plan_dhm
+
+# reward
+reward_specs:
+  road_network_weight: 0.0
+  life_circle_weight: 4.0
+  greenness_weight: 1.0
+
+# agent
+agent_specs:
+  batch_stage: false
+
+# training parameters
+skip_land_use: false
+skip_road: true
+road_ratio: 0.00
+gamma: 1.0
+tau: 0.0
+state_encoder_specs:
+  state_encoder_hidden_size: [64, 16]
+  gcn_node_dim: 16
+  num_gcn_layers: 2
+  num_edge_fc_layers: 1
+  max_num_nodes: 1000
+  max_num_edges: 3000
+  num_attention_heads: 1
+policy_specs:
+  policy_land_use_head_hidden_size: [32, 1]
+  policy_road_head_hidden_size: [32, 1]
+value_specs:
+  value_head_hidden_size: [32, 32, 1]
+lr: 4.0e-4
+weightdecay: 0.0
+eps: 1.0e-5
+value_pred_coef: 0.5
+entropy_coef: 0.01
+clip_epsilon: 0.2
+max_num_iterations: 1000
+num_episodes_per_iteration: 500
+max_sequence_length: 50
+num_optim_epoch: 4
+mini_batch_size: 256
+save_model_interval: 10
