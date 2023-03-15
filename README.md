@@ -4,7 +4,7 @@
 
 This repo contains the source codes and data for our paper:
 
-Yu Zheng, Yuming Lin, Liang Zhao, Tinghai Wu, Depeng Jin, Yong Li,  **Spatial planning of land use and roads via deep reinforcement learning**, in submission to Nature Machine Intelligence.
+Yu Zheng, Yuming Lin, Liang Zhao, Tinghai Wu, Depeng Jin, Yong Li,  **Spatial planning of urban communities via deep reinforcement learning**.
 
 
 # Installation 
