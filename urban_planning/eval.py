@@ -15,11 +15,12 @@ from urban_planning.utils.config import Config
 from urban_planning.agents.urban_planning_agent import UrbanPlanningAgent
 
 
-flags.DEFINE_string('root_dir', '/data1/mas/zhengyu/urban_planning/', 'Root directory for writing '
-                                                                      'logs/summaries/checkpoints.')
+flags.DEFINE_string('root_dir', '/data1/mas/zhengyu/drl_urban_planning/', 'Root directory for writing '
+                                                                          'logs/summaries/checkpoints.')
 flags.DEFINE_string('cfg', None, 'Configuration file of rl training.')
 flags.DEFINE_bool('tmp', False, 'Whether to use temporary storage.')
-flags.DEFINE_enum('agent', 'rl-sgnn', ['rl-sgnn', 'rl-mlp'], 'Agent type.')
+flags.DEFINE_enum('agent', 'rl-sgnn',
+                  ['rl-sgnn', 'rl-mlp', 'rule-centralized', 'rule-decentralized', 'ga'], 'Agent type.')
 flags.DEFINE_bool('mean_action', True, 'Whether to use greedy strategy.')
 flags.DEFINE_bool('visualize', False, 'Whether to visualize the planning process.')
 flags.DEFINE_bool('only_road', False, 'Whether to only visualize road planning.')
@@ -52,8 +53,17 @@ def main_loop(_):
     if FLAGS.only_road:
         agent.freeze_land_use()
 
-    agent.infer(num_samples=1, mean_action=FLAGS.mean_action, visualize=FLAGS.visualize,
-                save_video=FLAGS.save_video, only_road=FLAGS.only_road)
+    if FLAGS.agent != 'ga':
+        agent.infer(num_samples=1, mean_action=FLAGS.mean_action, visualize=FLAGS.visualize,
+                    save_video=FLAGS.save_video, only_road=FLAGS.only_road)
+    else:
+        best_solution, _ = agent.load_ga()
+        _, plan, log_eval = agent.fitness_ga(
+            best_solution, num_samples=1,
+            mean_action=FLAGS.mean_action, visualize=FLAGS.visualize,
+            return_log_eval=True)
+        pprint(plan, indent=4, sort_dicts=False)
+        agent.save_plan(log_eval)
 
 
 if __name__ == '__main__':

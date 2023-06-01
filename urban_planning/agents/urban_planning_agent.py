@@ -1,8 +1,5 @@
-import math
-import pickle
 import time
 
-import torch
 
 from khrylib.utils import *
 from khrylib.utils.torch import *
@@ -11,6 +8,7 @@ from khrylib.rl.core import estimate_advantages, LoggerRL
 from torch.utils.tensorboard import SummaryWriter
 from urban_planning.envs import CityEnv
 from urban_planning.models.model import create_sgnn_model, create_mlp_model, ActorCritic
+from urban_planning.models.baseline import RuleCentralizedPolicy, RuleDecentralizedPolicy, GAPolicy, NullModel
 from urban_planning.utils.tools import TrajBatchDisc
 from urban_planning.utils.config import Config
 
@@ -126,6 +124,15 @@ class UrbanPlanningAgent(AgentPPO):
             self.policy_net, self.value_net = create_mlp_model(cfg, self)
             self.actor_critic_net = ActorCritic(self.policy_net, self.value_net)
             to_device(self.device, self.actor_critic_net)
+        elif cfg.agent == 'rule-centralized':
+            self.policy_net = RuleCentralizedPolicy()
+            self.value_net = NullModel()
+        elif cfg.agent == 'rule-decentralized':
+            self.policy_net = RuleDecentralizedPolicy()
+            self.value_net = NullModel()
+        elif cfg.agent == 'ga':
+            self.policy_net = GAPolicy()
+            self.value_net = NullModel()
         else:
             raise NotImplementedError()
 
