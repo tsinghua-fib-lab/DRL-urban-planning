@@ -11,7 +11,7 @@ from khrylib.utils import *
 from urban_planning.utils.config import Config
 from urban_planning.agents.urban_planning_agent import UrbanPlanningAgent
 
-flags.DEFINE_string('root_dir', '/data/zhengyu/drl_urban_planning/', 'Root directory for writing '
+flags.DEFINE_string('root_dir', '/data1/zhengyu/drl_urban_planning/', 'Root directory for writing '
                                                                      'logs/summaries/checkpoints.')
 flags.DEFINE_string('cfg', None, 'Configuration file of rl training.')
 flags.DEFINE_bool('tmp', False, 'Whether to use temporary storage.')
