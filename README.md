@@ -51,5 +51,23 @@ You can replace `hlg_concept` to `dhm_concept` to train for the DHM community.
 ## Visualization
 You can visualize the generated spatial plans using the provided notebook in [demo](demo).
 
+## Baselines
+To evaluate the centralized heuristic, run:
+```
+python3 -m urban_planning.eval --cfg hlg --global_seed 111 --agent rule-centralized
+```
+
+To evaluate the decentralized heuristic, run:
+```
+python3 -m urban_planning.eval --cfg hlg --global_seed 111 --agent rule-decentralized
+```
+
+To evaluate the GA baseline, run:
+```
+python3 -m urban_planning.train_ga --cfg hlg --global_seed 111
+python3 -m urban_planning.eval --cfg hlg --global_seed 111 --agent ga
+```
+You can replace `hlg` to `dhm` to evaluate for the DHM community.
+
 ## License
 Please see the [license](LICENSE) for further details.
