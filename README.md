@@ -48,6 +48,10 @@ python3 -m urban_planning.train --cfg hlg_concept --global_seed 111
 ```
 You can replace `hlg_concept` to `dhm_concept` to train for the DHM community.
 
+You will see the following logs once you start training our model:
+
+https://user-images.githubusercontent.com/27959377/242561690-c01480a2-cedf-4889-8506-14add002227a.mp4
+
 ## Visualization
 You can visualize the generated spatial plans using the provided notebook in [demo](demo).
 
