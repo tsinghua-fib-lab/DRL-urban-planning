@@ -8,7 +8,7 @@ from khrylib.rl.core import estimate_advantages, LoggerRL
 from torch.utils.tensorboard import SummaryWriter
 from urban_planning.envs import CityEnv
 from urban_planning.models.model import create_sgnn_model, create_mlp_model, ActorCritic
-from urban_planning.models.baseline import RuleCentralizedPolicy, RuleDecentralizedPolicy, GAPolicy, NullModel
+from urban_planning.models.baseline import RuleCentralizedPolicy, RuleDecentralizedPolicy, GSCAPolicy, GAPolicy, NullModel
 from urban_planning.utils.tools import TrajBatchDisc
 from urban_planning.utils.config import Config
 
@@ -129,6 +129,12 @@ class UrbanPlanningAgent(AgentPPO):
             self.value_net = NullModel()
         elif cfg.agent == 'rule-decentralized':
             self.policy_net = RuleDecentralizedPolicy()
+            self.value_net = NullModel()
+        elif cfg.agent == 'gsca':
+            grid_cols = self.env._plc._grid_cols
+            grid_rows = self.env._plc._grid_rows
+            cell_edge_length = self.env._plc._cell_edge_length
+            self.policy_net = GSCAPolicy(grid_cols, grid_rows, cell_edge_length)
             self.value_net = NullModel()
         elif cfg.agent == 'ga':
             self.policy_net = GAPolicy()

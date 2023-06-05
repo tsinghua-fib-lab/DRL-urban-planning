@@ -20,7 +20,7 @@ flags.DEFINE_string('root_dir', '/data1/mas/zhengyu/drl_urban_planning/', 'Root 
 flags.DEFINE_string('cfg', None, 'Configuration file of rl training.')
 flags.DEFINE_bool('tmp', False, 'Whether to use temporary storage.')
 flags.DEFINE_enum('agent', 'rl-sgnn',
-                  ['rl-sgnn', 'rl-mlp', 'rule-centralized', 'rule-decentralized', 'ga'], 'Agent type.')
+                  ['rl-sgnn', 'rl-mlp', 'rule-centralized', 'rule-decentralized', 'gsca', 'ga'], 'Agent type.')
 flags.DEFINE_bool('mean_action', True, 'Whether to use greedy strategy.')
 flags.DEFINE_bool('visualize', False, 'Whether to visualize the planning process.')
 flags.DEFINE_bool('only_road', False, 'Whether to only visualize road planning.')
