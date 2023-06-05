@@ -66,6 +66,11 @@ To evaluate the decentralized heuristic, run:
 python3 -m urban_planning.eval --cfg hlg --global_seed 111 --agent rule-decentralized
 ```
 
+To evaluate the geometric set-coverage adapted baseline, run:
+```
+python3 -m urban_planning.eval --cfg hlg --global_seed 111 --agent gsca
+```
+
 To evaluate the GA baseline, run:
 ```
 python3 -m urban_planning.train_ga --cfg hlg --global_seed 111
