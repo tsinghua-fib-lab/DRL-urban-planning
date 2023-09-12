@@ -2,10 +2,12 @@
 ![Loading Model Overview](assets/pipeline_v3.png "Model Overview")
 ---
 
-This repo contains the source codes and data for our paper:
+In this project, we propose a reinforcement-learning-based framework for assisting urban planners in the complex task of optimizing the spatial design of urban communities.
+Our proposed model can generate land and road layout with superior spatial efficiency, and improve the productivity of human planners with a human-AI collaborative workflow.
 
-Yu Zheng, Yuming Lin, Liang Zhao, Tinghai Wu, Depeng Jin, Yong Li,  **Spatial planning of urban communities via deep reinforcement learning**.
+This project was initially described in the [research article in *Nature Computational Science*](https://www.nature.com/articles/s43588-023-00503-5):
 
+Yu Zheng, Yuming Lin, Liang Zhao, Tinghai Wu, Depeng Jin, Yong Li. **Spatial planning of urban communities via deep reinforcement learning**. Nat Comput Sci (2023). https://doi.org/10.1038/s43588-023-00503-5
 
 ## Installation 
 
