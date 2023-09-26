@@ -14,7 +14,7 @@ Yu Zheng, Yuming Lin, Liang Zhao, Tinghai Wu, Depeng Jin, Yong Li. **Spatial pla
 ### Environment
 * **Tested OS:** Linux
 * Python >= 3.8
-* PyTorch >= 1.8.1
+* PyTorch >= 1.8.1, <= 1.13.0
 ### Dependencies:
 1. Install [PyTorch](https://pytorch.org/get-started/previous-versions/) with the correct CUDA version.
 2. Set the following environment variable to avoid problems with multiprocess trajectory sampling:
