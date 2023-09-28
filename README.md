@@ -9,6 +9,8 @@ This project was initially described in the [research article in *Nature Computa
 
 Yu Zheng, Yuming Lin, Liang Zhao, Tinghai Wu, Depeng Jin, Yong Li. **Spatial planning of urban communities via deep reinforcement learning**. Nat Comput Sci (2023). https://doi.org/10.1038/s43588-023-00503-5
 
+Full text (PDF) is available at [this link](https://rdcu.be/dlRPZ).
+
 ## Installation 
 
 ### Environment
