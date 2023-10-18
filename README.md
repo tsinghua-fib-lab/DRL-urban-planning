@@ -82,6 +82,24 @@ python3 -m urban_planning.eval --cfg hlg --global_seed 111 --agent ga
 ```
 You can replace `hlg` to `dhm` to evaluate for the DHM community.
 
+## Citation
+If you use this code in your project, please consider citing the following paper:
+```bibtex
+@article{zheng_spatial_2023,
+	title = {Spatial planning of urban communities via deep reinforcement learning},
+	volume = {3},
+	issn = {2662-8457},
+	url = {https://doi.org/10.1038/s43588-023-00503-5},
+	doi = {10.1038/s43588-023-00503-5},
+	number = {9},
+	journal = {Nature Computational Science},
+	author = {Zheng, Yu and Lin, Yuming and Zhao, Liang and Wu, Tinghai and Jin, Depeng and Li, Yong},
+	month = sep,
+	year = {2023},
+	pages = {748--762},
+}
+```
+
 ## License
 Please see the [license](LICENSE) for further details.
 
