@@ -2,23 +2,11 @@ import yaml
 import glob
 import pickle
 import os
-import socket
 
 
 def get_file_path(file_path):
-    hostname = socket.gethostname()
-    if hostname == 'fib':
-        file_path = os.path.join('/home/mas/zhengyu/workspace/urban_planning', file_path)
-    elif hostname == 'rl2':
-        file_path = os.path.join('/home/zhengyu/workspace/urban_planning', file_path)
-    elif hostname == 'rl3':
-        file_path = os.path.join('/home/zhengyu/workspace/urban_planning', file_path)
-    elif hostname == 'rl4':
-        file_path = os.path.join('/home/zhengyu/workspace/urban_planning', file_path)
-    elif hostname == 'DL4':
-        file_path = os.path.join('/data2/zhengyu/workspace/urban_planning', file_path)
-    else:
-        raise ValueError('Unknown hostname: {}'.format(socket.gethostname()))
+    project_path = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+    file_path = os.path.join(project_path, file_path)
     return file_path
 
 
