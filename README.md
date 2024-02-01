@@ -103,6 +103,10 @@ If you use this code in your project, please consider citing the following paper
 ## License
 Please see the [license](LICENSE) for further details.
 
+## Note
+
+The implemention is based on *[Transform2Act](https://github.com/Khrylx/Transform2Act)* and *[circuit_training](https://github.com/google-research/circuit_training)*.
+
 ## Awesome AI Planning Support Tools
 With urban planning being a long-standing problem, researchers have devoted decades of efforts to developing computational models and supporting tools for it in order to automate its process. 
 Automated spatial layout seemed impossible until much more recently with the latest advancements in artificial intelligence, especially deep reinforcement learning.
