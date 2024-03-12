@@ -85,7 +85,7 @@ You can replace `hlg` to `dhm` to evaluate for the DHM community.
 ## Change base map
 We conduct experiments on the HLG and DHM communities, which are real-world communities in Beijing, China.
 You can change the base map to your own community.
-We provide an example in [extra](extra) showing how to prepare the base map data of another community in Huizhou, China 
+We provide an example in [extra](extra) showing how to prepare the base map data of another community in Huizhou, China.
 
 ## Citation
 If you use this code in your project, please consider citing the following paper:
