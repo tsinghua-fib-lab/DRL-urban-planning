@@ -1,0 +1,62 @@
+community:
+  name: dhm
+  grid_cols: 175
+  grid_rows: 230
+  cell_edge_length: 10
+objectives:
+  land_use:
+    - residential
+    - business
+    - office
+    - green_l
+    - school
+    - hospital_l
+    - hospital_s
+    - recreation
+  ratio:
+    residential: 0.550
+  count:
+    business: 10
+    office: 3
+    green_l: 3
+    school: 5
+    hospital_l: 1
+    hospital_s: 3
+    recreation: 3
+constraints:
+  max_area:
+    residential: 100000
+    green_l: 30000
+    hospital_l: 5000
+    business: 25000
+    office: 25000
+    school: 50000
+    hospital_s: 5000
+    recreation: 3000
+  min_area:
+    residential: 10000
+    green_l: 10000
+    hospital_l: 2000
+    business: 10000
+    office: 10000
+    school: 20000
+    hospital_s: 2000
+    recreation: 2000
+  max_edge_length:
+    residential: 300
+    green_l: 300
+    hospital_l: 150
+    business: 250
+    office: 250
+    school: 300
+    hospital_s: 150
+    recreation: 150
+  min_edge_length:
+    residential: 100
+    green_l: 100
+    hospital_l: 80
+    business: 100
+    office: 100
+    school: 100
+    hospital_s: 80
+    recreation: 80
