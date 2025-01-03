@@ -37,6 +37,8 @@ The figure below illustrates the initial conditions of the three scenarios.
 
 With the initial conditions and planning objectives, the agent will generate millions of spatial plans for the community in real-time during training, which are stored in the replay buffer for training.
 
+Codes for data generation (unorganized) can be found in [misc](misc).
+
 ## Training
 You can train your own models using the provided config in [urban_planning/cfg/exp_cfg/real](urban_planning/cfg/exp_cfg/real).
 
